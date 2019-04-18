@@ -77,6 +77,10 @@ EOF;
 		if (!is_numeric($invoiceid)) {
 			return 'Invoice ID is invalid';
 		}
+		
+		if ($_POST['status']!==1) {
+			return 'Status !== 1';	
+		}
 
 		$billic->module('Invoices');
 		return $billic->modules['Invoices']->addpayment(array(
