@@ -78,8 +78,8 @@ EOF;
 			return 'Invoice ID is invalid';
 		}
 		
-		if ($_POST['status']!==1) {
-			return 'Status !== 1';	
+		if ($_POST['status']!=1) {
+			return 'Status != 1';	
 		}
 
 		$billic->module('Invoices');
