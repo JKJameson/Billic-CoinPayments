@@ -79,8 +79,8 @@ EOF;
 			return 'Invoice ID is invalid';
 		}
 		
-		if ($_POST['status']!=100) {
-			return 'Status != 100';	
+		if ($_POST['status']!==2 && $_POST['status']<100) {
+			return 'Status of payment is not ready';	
 		}
 
 		$billic->module('Invoices');
